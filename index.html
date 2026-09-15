@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitor Barbosa Nunes Advocacia | Plano de saúde, hospitais e direitos do consumidor</title>
+  <meta name="description" content="Problemas com plano de saúde, hospital, atendimento médico ou serviços essenciais? Análise individual do seu caso com atendimento por WhatsApp.">
+  <meta name="theme-color" content="#0B1F33">
+  <meta property="og:title" content="Vitor Barbosa Nunes Advocacia">
+  <meta property="og:description" content="Negativas de plano de saúde, cobranças indevidas, falhas hospitalares e outros problemas de consumo. Conheça seus direitos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/hero.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       VITOR BARBOSA NUNES ADVOCACIA
+       Landing page de conversão via WhatsApp
+       ---------------------------------------------------------
+       CONFIGURAÇÃO: edite o bloco CONFIG no final do arquivo
+       (WhatsApp, e-mail, Instagram, OAB, forma de atendimento).
+       FOTO DO HERO: arquivo img/hero.jpg.
+       ========================================================= */
+
+    :root {
+      --navy: #0B1F33;
+      --navy-2: #081827;
+      --petrol: #174A5B;
+      --off: #F6F4EF;
+      --white: #FFFFFF;
+      --gold: #B99A62;
+      --ink: #2A2E32;
+      --ink-soft: #5C6369;
+      --line: rgba(11, 31, 51, 0.12);
+      --line-dark: rgba(255, 255, 255, 0.14);
+      --wa: #25D366;
+
+      --hero-photo: url('img/hero.jpg');
+
+      --font: 'Plus Jakarta Sans', 'Poppins', 'Montserrat', system-ui, sans-serif;
+      --container: 1140px;
+      --gutter: clamp(20px, 4vw, 40px);
+      --section: clamp(56px, 7vw, 96px);
+      --radius: 6px;
+      --ease: cubic-bezier(.22, .61, .36, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      font-size: 1.0625rem;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+
+    .container { width: min(var(--container), 100% - 2 * var(--gutter)); margin-inline: auto; }
+
+    /* ---------- Tipografia ---------- */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 14px;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold);
+    }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); }
+    .eyebrow.center::after { content: ""; width: 26px; height: 1px; background: var(--gold); }
+
+    h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.12; color: var(--navy); }
+    h1 { font-size: clamp(2.1rem, 4.8vw, 3.7rem); line-height: 1.06; letter-spacing: -0.025em; }
+    h2 { font-size: clamp(1.6rem, 2.9vw, 2.4rem); }
+    h3 { font-size: 1.12rem; letter-spacing: -0.01em; }
+    .lead { font-size: clamp(1rem, 1.25vw, 1.12rem); color: var(--ink-soft); line-height: 1.6; }
+    .on-dark h1, .on-dark h2, .on-dark h3 { color: var(--white); }
+    .on-dark .lead, .on-dark p { color: rgba(255, 255, 255, 0.78); }
+
+    /* ---------- Botões ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      padding: 17px 28px; border-radius: var(--radius);
+      font-family: var(--font); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+      transition: transform .22s var(--ease), box-shadow .22s var(--ease), background-color .22s, color .22s, border-color .22s;
+    }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn-navy { background: var(--navy); color: var(--white); }
+    .btn-navy:hover { background: var(--petrol); box-shadow: 0 18px 40px -18px rgba(11, 31, 51, 0.55); }
+    .btn-light { background: var(--white); color: var(--navy); }
+    .btn-light:hover { background: var(--off); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.6); }
+    .btn-ghost { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, 0.35); padding: 11px 18px; font-size: 0.7rem; }
+    .btn-ghost:hover { border-color: var(--white); background: rgba(255, 255, 255, 0.06); }
+    .btn-icon { padding: 11px; width: 42px; height: 42px; }
+    .btn-lg { padding: 21px 38px; font-size: 0.84rem; }
+
+    .cta-center { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+    .cta-note { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.45; }
+    .on-dark .cta-note { color: rgba(255, 255, 255, 0.62); }
+
+    /* ---------- Header ---------- */
+    .header {
+      position: fixed; inset: 0 0 auto 0; z-index: 50;
+      padding: 20px 0;
+      transition: background-color .3s, padding .3s, box-shadow .3s, color .3s;
+      color: var(--white);
+    }
+    .header .container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .brand { display: flex; flex-direction: column; line-height: 1.1; }
+    .brand-name { font-size: 0.84rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+    .brand-sub { font-size: 0.64rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-top: 5px; }
+    .header.scrolled {
+      background: rgba(246, 244, 239, 0.92);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      color: var(--navy); padding: 12px 0;
+      box-shadow: 0 1px 0 var(--line);
+    }
+    .header.scrolled .btn-ghost { color: var(--navy); border-color: rgba(11, 31, 51, 0.3); }
+    .header.scrolled .btn-ghost:hover { border-color: var(--navy); background: rgba(11, 31, 51, 0.04); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background: var(--navy); color: var(--white);
+      min-height: 88svh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: clamp(120px, 15vh, 170px) 0 clamp(64px, 9vh, 110px);
+      text-align: center;
+    }
+    .hero-photo {
+      position: absolute; inset: 0; z-index: -3;
+      background-image: var(--hero-photo);
+      background-size: cover; background-position: center 35%;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: -2;
+      background:
+        radial-gradient(ellipse 60% 75% at 50% 50%, rgba(11, 31, 51, 0.42) 0%, rgba(11, 31, 51, 0.72) 100%),
+        linear-gradient(180deg, rgba(11, 31, 51, 0.7) 0%, rgba(11, 31, 51, 0.22) 45%, rgba(11, 31, 51, 0.88) 100%);
+    }
+    .hero-tint { position: absolute; inset: 0; z-index: -1; background: rgba(23, 74, 91, 0.16); mix-blend-mode: multiply; pointer-events: none; }
+    .hero-grain {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.4; mix-blend-mode: soft-light;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+    }
+    .hero .container { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+    .hero h1 { margin: 24px auto 20px; max-width: 18ch; color: var(--white); text-shadow: 0 2px 30px rgba(0, 0, 0, 0.25); }
+    .hero .lead { max-width: 56ch; color: rgba(255, 255, 255, 0.82); }
+    .hero .cta-center { margin-top: 34px; }
+
+    .hero .rise { opacity: 0; transform: translateY(16px); animation: rise .9s var(--ease) forwards; }
+    .hero .rise:nth-child(1) { animation-delay: .1s; }
+    .hero .rise:nth-child(2) { animation-delay: .22s; }
+    .hero .rise:nth-child(3) { animation-delay: .34s; }
+    .hero .rise:nth-child(4) { animation-delay: .46s; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    /* ---------- Seções ---------- */
+    section { padding: var(--section) 0; }
+    .bg-off { background: var(--off); }
+    .bg-white { background: var(--white); }
+    .bg-navy { background: var(--navy); }
+
+    .section-head { max-width: 700px; }
+    .section-head h2 { margin-top: 18px; }
+    .section-head .lead { margin-top: 14px; }
+
+    /* ---------- Situações ---------- */
+    .situations {
+      margin-top: clamp(32px, 4.5vw, 48px);
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+    }
+    .situation {
+      padding: 22px 22px 24px 0; border-bottom: 1px solid var(--line);
+      display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start;
+      font-weight: 500; color: var(--navy); font-size: 0.98rem; line-height: 1.45;
+    }
+    .situation:not(:nth-child(4n+1)) { padding-left: 22px; border-left: 1px solid var(--line); }
+    .situation .n { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; color: var(--gold); padding-top: 5px; }
+    .situations-foot { margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .situations-foot p { font-size: 0.94rem; color: var(--ink-soft); max-width: 52ch; }
+
+    /* ---------- Direito Médico ---------- */
+    .panel {
+      margin-top: clamp(32px, 4.5vw, 48px);
+      background: linear-gradient(135deg, var(--navy) 0%, #10344a 60%, var(--petrol) 130%);
+      color: var(--white); border-radius: var(--radius);
+      padding: clamp(28px, 4vw, 48px);
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 48px);
+      position: relative; overflow: hidden;
+      box-shadow: 0 40px 80px -50px rgba(11, 31, 51, 0.7);
+    }
+    .panel::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 50% 60% at 100% 0%, rgba(185, 154, 98, 0.14), transparent 65%);
+    }
+    .panel-col { position: relative; }
+    .panel-col + .panel-col { padding-left: clamp(24px, 4vw, 48px); border-left: 1px solid var(--line-dark); }
+    .panel-col h3 { margin-top: 12px; font-size: 1.12rem; color: var(--white); line-height: 1.3; }
+    .panel-col .list { margin-top: 14px; }
+    .panel-col .list li { position: relative; padding: 4px 0 4px 16px; font-size: 0.95rem; line-height: 1.5; color: rgba(255, 255, 255, 0.82); }
+    .panel-col .list li::before { content: ""; position: absolute; left: 0; top: 13px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+    .panel-cta { margin-top: 36px; }
+
+    /* ---------- Outros problemas ---------- */
+    .services {
+      margin-top: clamp(28px, 4.5vw, 44px);
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .service { padding: 24px 20px 26px 0; }
+    .service + .service { padding-left: 20px; border-left: 1px solid var(--line); }
+    .service h3 { font-size: 1.02rem; }
+    .service h3 .n { display: block; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 10px; }
+    .service p { margin-top: 8px; color: var(--ink-soft); font-size: 0.88rem; line-height: 1.55; }
+
+    /* ---------- Afirmação + etapas ---------- */
+    .statement { position: relative; overflow: hidden; }
+    .statement::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 45% 70% at 15% 30%, rgba(23, 74, 91, 0.7), transparent 70%);
+    }
+    .statement .container { position: relative; }
+    .statement h2 { max-width: 24ch; font-size: clamp(1.8rem, 3.4vw, 2.8rem); margin-top: 18px; }
+    .steps { margin-top: clamp(36px, 4.5vw, 56px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 48px); }
+    .step { border-top: 1px solid rgba(255, 255, 255, 0.22); padding-top: 20px; }
+    .step .num { font-size: 2.2rem; font-weight: 300; letter-spacing: -0.03em; color: var(--gold); line-height: 1; }
+    .step h3 { margin-top: 16px; font-size: 1.1rem; }
+    .step p { margin-top: 8px; font-size: 0.95rem; }
+    .statement .cta-center { margin-top: 44px; }
+
+    /* ---------- Institucional ---------- */
+    .about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(24px, 6vw, 96px); align-items: center; }
+    .about-mark {
+      width: 52px; height: 52px; border: 1px solid var(--gold); border-radius: 2px;
+      display: grid; place-items: center; color: var(--gold);
+      font-size: 0.74rem; font-weight: 600; letter-spacing: 0.22em; margin-bottom: 20px;
+    }
+    .about h2 { font-size: clamp(1.35rem, 2.3vw, 1.85rem); text-transform: uppercase; letter-spacing: 0.04em; }
+    .about h2 small { display: block; font-size: 0.68rem; letter-spacing: 0.32em; color: var(--gold); margin-top: 10px; font-weight: 600; }
+    .about-text p { font-size: 1.06rem; line-height: 1.7; color: var(--ink); }
+    .about-meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+    .about-meta span:empty { display: none; }
+    .about-meta a { display: inline-flex; align-items: center; gap: 8px; color: var(--navy); border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: color .2s; }
+    .about-meta a:hover { color: var(--petrol); }
+    .about-meta a svg { width: 15px; height: 15px; }
+
+    /* ---------- FAQ ---------- */
+    .faq { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(24px, 6vw, 96px); align-items: start; }
+    .faq-head { position: sticky; top: 96px; }
+    .faq-head h2 { margin-top: 18px; }
+    .faq-head p { margin-top: 14px; color: var(--ink-soft); font-size: 0.96rem; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary {
+      list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      padding: 18px 0; font-weight: 600; color: var(--navy); font-size: 1.02rem; line-height: 1.4;
+      transition: color .2s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary:hover { color: var(--petrol); }
+    .faq-list summary .plus { position: relative; flex: none; width: 28px; height: 28px; border: 1px solid var(--line); border-radius: 50%; transition: transform .3s var(--ease), border-color .2s; }
+    .faq-list summary .plus::before, .faq-list summary .plus::after { content: ""; position: absolute; background: var(--gold); left: 50%; top: 50%; transform: translate(-50%, -50%); }
+    .faq-list summary .plus::before { width: 12px; height: 1px; }
+    .faq-list summary .plus::after { width: 1px; height: 12px; }
+    .faq-list details[open] summary .plus { transform: rotate(45deg); border-color: var(--gold); }
+    .faq-list .answer { padding: 0 48px 20px 0; color: var(--ink-soft); font-size: 0.96rem; line-height: 1.65; }
+    .faq-list details[open] .answer { animation: fade .35s var(--ease); }
+    @keyframes fade { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+    /* ---------- CTA final ---------- */
+    .final { position: relative; overflow: hidden; }
+    .final::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 55% 70% at 85% 20%, rgba(23, 74, 91, 0.8), transparent 65%),
+        radial-gradient(ellipse 40% 50% at 10% 100%, rgba(185, 154, 98, 0.14), transparent 60%);
+    }
+    .final .container { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .final h2 { max-width: 20ch; font-size: clamp(1.8rem, 3.8vw, 3rem); margin-top: 18px; }
+    .final .lead { max-width: 54ch; margin-top: 18px; }
+    .final .btn { margin-top: 34px; }
+    .final .cta-note { margin-top: 14px; max-width: 48ch; }
+
+    /* ---------- Footer ---------- */
+    .footer { background: var(--navy-2); color: rgba(255, 255, 255, 0.68); padding: clamp(48px, 6vw, 72px) 0 32px; font-size: 0.9rem; border-top: 1px solid rgba(185, 154, 98, 0.35); }
+    .footer-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 80px); padding-bottom: 36px; border-bottom: 1px solid var(--line-dark); }
+    .footer .brand { color: var(--white); }
+    .footer-lawyer { margin-top: 22px; line-height: 1.7; }
+    .footer-lawyer strong { display: block; color: var(--white); font-weight: 600; font-size: 1rem; }
+    .footer-lawyer .oab { color: rgba(255, 255, 255, 0.72); letter-spacing: 0.04em; }
+    .footer-lawyer .oab:empty { display: none; }
+    .footer-desc { margin-top: 14px; font-size: 0.86rem; line-height: 1.65; max-width: 40ch; color: rgba(255, 255, 255, 0.55); }
+    .footer h4 { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .footer-col ul li { padding: 5px 0; font-size: 0.9rem; }
+    .footer-col ul li:empty { display: none; }
+    .footer-col a { display: inline-flex; align-items: center; gap: 10px; color: var(--white); transition: color .2s; }
+    .footer-col a:hover { color: var(--gold); }
+    .footer-col svg { width: 16px; height: 16px; flex: none; }
+    .footer-bottom { padding-top: 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px 32px; flex-wrap: wrap; font-size: 0.76rem; color: rgba(255, 255, 255, 0.45); line-height: 1.6; }
+    .footer-bottom p { max-width: 68ch; }
+    .footer-bottom .copy { white-space: nowrap; }
+
+    /* ---------- Botão flutuante ---------- */
+    .wa-float {
+      position: fixed; right: 22px; bottom: 22px; z-index: 60;
+      width: 58px; height: 58px; border-radius: 50%; background: var(--wa); color: var(--white);
+      display: grid; place-items: center;
+      box-shadow: 0 14px 34px -10px rgba(37, 211, 102, 0.7), 0 4px 12px rgba(0, 0, 0, 0.18);
+      transition: transform .22s var(--ease), box-shadow .22s;
+    }
+    .wa-float svg { width: 29px; height: 29px; }
+    .wa-float:hover { transform: translateY(-3px) scale(1.04); }
+    .wa-float .tip {
+      position: absolute; right: calc(100% + 14px); top: 50%; transform: translateY(-50%);
+      background: var(--navy); color: var(--white); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 10px 14px; border-radius: 4px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s;
+    }
+    .wa-float:hover .tip { opacity: 1; }
+
+    /* ---------- Reveal ao rolar ---------- */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal-d1 { transition-delay: .1s; } .reveal-d2 { transition-delay: .2s; } .reveal-d3 { transition-delay: .3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero .rise { animation: none; opacity: 1; transform: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn, .wa-float { transition: none; }
+    }
+
+    /* ---------- Responsivo ---------- */
+    @media (max-width: 1024px) {
+      .situations { grid-template-columns: repeat(2, 1fr); }
+      .situation:not(:nth-child(4n+1)) { padding-left: 0; border-left: 0; }
+      .situation:nth-child(2n) { padding-left: 22px; border-left: 1px solid var(--line); }
+      .panel { grid-template-columns: 1fr; }
+      .panel-col + .panel-col { padding-left: 0; border-left: 0; padding-top: 24px; border-top: 1px solid var(--line-dark); }
+      .services { grid-template-columns: repeat(2, 1fr); border-bottom: 0; }
+      .service { border-bottom: 1px solid var(--line); }
+      .service + .service { padding-left: 0; border-left: 0; }
+      .service:nth-child(2n) { padding-left: 20px; border-left: 1px solid var(--line); }
+      .steps { grid-template-columns: 1fr; gap: 26px; }
+      .faq { grid-template-columns: 1fr; }
+      .faq-head { position: static; }
+      .about { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid .footer-col:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 640px) {
+      body { font-size: 1rem; }
+      .header .btn-text { display: none; }
+      .hero { min-height: auto; padding-top: 112px; }
+      .hero h1 { max-width: none; }
+      .eyebrow.center::before, .eyebrow.center::after { display: none; }
+      .btn { width: 100%; }
+      .header .btn, .wa-float { width: auto; }
+      .header .btn-icon { width: 42px; }
+      .wa-float { width: 54px; height: 54px; right: 16px; bottom: 16px; }
+      .situations { grid-template-columns: 1fr; }
+      .situation:nth-child(2n) { padding-left: 0; border-left: 0; }
+      .situation { padding: 16px 0; }
+      .situations-foot { flex-direction: column; align-items: stretch; }
+      .services { grid-template-columns: 1fr; }
+      .service:nth-child(2n) { padding-left: 0; border-left: 0; }
+      .service { padding: 18px 0; }
+      .faq-list .answer { padding-right: 0; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom .copy { white-space: normal; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container">
+      <a class="brand" href="#topo" aria-label="Vitor Barbosa Nunes Advocacia">
+        <span class="brand-name">Vitor Barbosa Nunes</span>
+        <span class="brand-sub">Advocacia</span>
+      </a>
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-icon js-ig" href="#" target="_blank" rel="noopener" aria-label="Instagram do escritório">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"/></svg>
+        </a>
+        <a class="btn btn-ghost js-wa" href="#" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.7-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          <span class="btn-text">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- ================= 1. HERO ================= -->
+    <section class="hero on-dark" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="Casal em casa lendo uma correspondência com preocupação"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-tint" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+
+      <div class="container">
+        <span class="eyebrow center rise">Direito Médico · Planos de Saúde · Consumidor</span>
+        <h1 class="rise" id="hero-title">Problemas com plano de saúde, hospital ou atendimento médico? Conheça seus direitos.</h1>
+        <p class="lead rise">Negativas de procedimentos, cobranças indevidas, cancelamentos e falhas hospitalares podem exigir uma análise jurídica cuidadosa.</p>
+        <div class="cta-center rise">
+          <a class="btn btn-light btn-lg js-wa" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.7-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Fale com um advogado
+          </a>
+          <span class="cta-note">Atendimento para análise individual do seu caso.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. IDENTIFICAÇÃO COM A DOR ================= -->
+    <section class="bg-off" id="situacoes" aria-labelledby="sit-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Identifique a sua situação</span>
+          <h2 id="sit-title">Você está enfrentando alguma dessas situações?</h2>
+        </div>
+
+        <ul class="situations reveal reveal-d1">
+          <li class="situation"><span class="n">01</span><span>Plano de saúde negou cirurgia, tratamento, exame ou medicamento</span></li>
+          <li class="situation"><span class="n">02</span><span>Procedimento autorizado e depois cancelado</span></li>
+          <li class="situation"><span class="n">03</span><span>Plano de saúde cancelado indevidamente</span></li>
+          <li class="situation"><span class="n">04</span><span>Cobranças que você não reconhece</span></li>
+          <li class="situation"><span class="n">05</span><span>Nome negativado no SERASA ou SPC</span></li>
+          <li class="situation"><span class="n">06</span><span>Possível erro médico</span></li>
+          <li class="situation"><span class="n">07</span><span>Falha no atendimento ou na estrutura hospitalar</span></li>
+          <li class="situation"><span class="n">08</span><span>Demora excessiva para exames, consultas ou procedimentos</span></li>
+        </ul>
+
+        <div class="situations-foot reveal">
+          <p>Cada situação tem particularidades. A documentação e as circunstâncias precisam ser analisadas individualmente.</p>
+          <a class="btn btn-navy js-wa" href="#" target="_blank" rel="noopener">Quero entender meus direitos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. DIREITO MÉDICO E PLANOS DE SAÚDE ================= -->
+    <section class="bg-white" id="direito-medico" aria-labelledby="med-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Direito Médico e Planos de Saúde</span>
+          <h2 id="med-title">Quando você precisa cuidar da saúde, uma negativa pode transformar o problema em algo ainda maior.</h2>
+        </div>
+
+        <div class="panel on-dark reveal reveal-d1">
+          <div class="panel-col">
+            <span class="eyebrow">01</span>
+            <h3>Negativa de plano de saúde</h3>
+            <ul class="list"><li>Cirurgias</li><li>Exames</li><li>Medicamentos</li><li>Tratamentos e terapias</li><li>Internações</li><li>Procedimentos médicos</li></ul>
+          </div>
+          <div class="panel-col">
+            <span class="eyebrow">02</span>
+            <h3>Problemas com planos de saúde</h3>
+            <ul class="list"><li>Cancelamento indevido</li><li>Cobranças indevidas</li><li>Problemas com autorizações</li><li>Demora para atendimento</li><li>Alterações contratuais e conflitos de cobertura</li></ul>
+          </div>
+          <div class="panel-col">
+            <span class="eyebrow">03</span>
+            <h3>Responsabilidade médica e hospitalar</h3>
+            <ul class="list"><li>Suspeita de erro médico</li><li>Falha hospitalar</li><li>Problemas durante atendimento</li><li>Demora na entrega de exames</li><li>Demora no agendamento de procedimentos</li></ul>
+          </div>
+        </div>
+
+        <div class="panel-cta cta-center reveal">
+          <a class="btn btn-navy btn-lg js-wa" href="#" target="_blank" rel="noopener">Fale sobre o seu caso</a>
+          <span class="cta-note">Atendimento para análise individual do seu caso.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. OUTROS PROBLEMAS DE CONSUMO ================= -->
+    <section class="bg-off" id="consumo" aria-labelledby="cons-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Relações de consumo</span>
+          <h2 id="cons-title">Problemas com serviços da sua rotina também podem gerar direitos.</h2>
+        </div>
+
+        <div class="services reveal reveal-d1">
+          <div class="service">
+            <h3><span class="n">01</span>Energia elétrica</h3>
+            <p>Cobranças indevidas, interrupções injustificadas e falhas de faturamento.</p>
+          </div>
+          <div class="service">
+            <h3><span class="n">02</span>Água e saneamento</h3>
+            <p>Cobranças anormais, interrupções e falhas na prestação do serviço.</p>
+          </div>
+          <div class="service">
+            <h3><span class="n">03</span>Telefonia e internet</h3>
+            <p>Cobranças indevidas, serviços não contratados e falhas recorrentes.</p>
+          </div>
+          <div class="service">
+            <h3><span class="n">04</span>Companhias aéreas</h3>
+            <p>Cancelamentos, atrasos, bagagem e falhas na prestação do serviço.</p>
+          </div>
+          <div class="service">
+            <h3><span class="n">05</span>Negativação indevida</h3>
+            <p>Inclusão ou manutenção irregular do nome no SERASA e no SPC.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. AFIRMAÇÃO + COMO FUNCIONA ================= -->
+    <section class="bg-navy on-dark statement" id="como-funciona" aria-labelledby="st-title">
+      <div class="container">
+        <span class="eyebrow reveal">Como funciona o atendimento</span>
+        <h2 id="st-title" class="reveal">Uma cobrança indevida, uma negativa médica ou uma falha no atendimento não deve simplesmente ser ignorada.</h2>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="num">01</span>
+            <h3>Conte o que aconteceu</h3>
+            <p>Explique brevemente o problema enfrentado.</p>
+          </div>
+          <div class="step reveal reveal-d1">
+            <span class="num">02</span>
+            <h3>Apresente os documentos</h3>
+            <p>Protocolos, contratos, exames, boletos, mensagens e negativas ajudam na análise.</p>
+          </div>
+          <div class="step reveal reveal-d2">
+            <span class="num">03</span>
+            <h3>Entenda as possibilidades</h3>
+            <p>Após a análise, você recebe a explicação das alternativas jurídicas cabíveis.</p>
+          </div>
+        </div>
+
+        <div class="cta-center reveal reveal-d2">
+          <a class="btn btn-light btn-lg js-wa" href="#" target="_blank" rel="noopener">Solicitar análise do caso</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. INSTITUCIONAL ================= -->
+    <section class="bg-white" id="escritorio" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about">
+          <div class="reveal">
+            <div class="about-mark" aria-hidden="true">VBN</div>
+            <h2 id="about-title">Vitor Barbosa Nunes <small>Advocacia</small></h2>
+          </div>
+          <div class="about-text reveal reveal-d1">
+            <p>Atuação voltada à defesa de consumidores, com atenção especial a conflitos envolvendo saúde, planos de saúde, hospitais e prestação de serviços. Atendimento próximo, claro e individualizado.</p>
+            <div class="about-meta">
+              <!-- OAB e forma de atendimento vêm do CONFIG e ficam ocultos enquanto vazios. -->
+              <span id="oab"></span>
+              <span id="atendimento"></span>
+              <a class="js-ig" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"/></svg>
+                <span class="js-ig-handle"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. FAQ ================= -->
+    <section class="bg-off" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq">
+          <div class="faq-head reveal">
+            <span class="eyebrow">Dúvidas frequentes</span>
+            <h2 id="faq-title">Perguntas comuns de quem passa por essas situações.</h2>
+            <p>Respostas informativas. Cada caso depende de análise individual.</p>
+          </div>
+
+          <div class="faq-list reveal reveal-d1">
+            <details>
+              <summary>Meu plano de saúde negou um procedimento. O que devo fazer?<span class="plus" aria-hidden="true"></span></summary>
+              <div class="answer">Guarde a negativa por escrito, o pedido médico e os protocolos. Com esses documentos é possível avaliar se a recusa está de acordo com o contrato e com as normas aplicáveis, e quais medidas cabem no seu caso.</div>
+            </details>
+            <details>
+              <summary>O plano pode cancelar meu contrato?<span class="plus" aria-hidden="true"></span></summary>
+              <div class="answer">Em algumas hipóteses sim, em outras o cancelamento pode ser questionado. Depende do tipo de contrato, do motivo alegado e de como a comunicação foi feita, o que exige análise individual.</div>
+            </details>
+            <details>
+              <summary>Posso questionar uma cobrança que não reconheço?<span class="plus" aria-hidden="true"></span></summary>
+              <div class="answer">Sim. Registre a contestação junto ao fornecedor e guarde o protocolo. Faturas, comprovantes e o histórico de contato ajudam a verificar a origem da cobrança e as providências possíveis.</div>
+            </details>
+            <details>
+              <summary>Tive um problema durante atendimento médico. Como saber se houve falha?<span class="plus" aria-hidden="true"></span></summary>
+              <div class="answer">Nem toda intercorrência caracteriza falha. A avaliação passa pelo prontuário, exames e conduta adotada, muitas vezes com apoio técnico. Reunir esses registros é o primeiro passo.</div>
+            </details>
+            <details>
+              <summary>Meu nome foi negativado por uma dívida que não reconheço. O que posso fazer?<span class="plus" aria-hidden="true"></span></summary>
+              <div class="answer">Solicite a comprovação da dívida ao credor e ao órgão de proteção ao crédito, guardando os protocolos. Sem origem legítima, podem existir medidas para retirar a negativação e discutir eventuais prejuízos.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. CTA FINAL ================= -->
+    <section class="bg-navy on-dark final" id="contato" aria-labelledby="final-title">
+      <div class="container">
+        <span class="eyebrow center reveal">Fale com o escritório</span>
+        <h2 id="final-title" class="reveal reveal-d1">Está enfrentando um problema com plano de saúde, hospital ou serviço de consumo?</h2>
+        <p class="lead reveal reveal-d2">Entenda quais direitos podem estar envolvidos na sua situação e quais caminhos jurídicos podem ser avaliados.</p>
+        <a class="btn btn-light btn-lg js-wa reveal reveal-d3" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.7-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+          Fale com um advogado
+        </a>
+        <span class="cta-note reveal reveal-d3">Atendimento individual e análise de cada situação conforme suas particularidades.</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand">
+            <span class="brand-name">Vitor Barbosa Nunes</span>
+            <span class="brand-sub">Advocacia</span>
+          </div>
+          <p class="footer-lawyer">
+            <strong id="nome-footer"></strong>
+            Advogado <span class="oab" id="oab-footer"></span>
+          </p>
+          <p class="footer-desc">Advocacia voltada à defesa do consumidor, com atuação especial em Direito Médico e planos de saúde.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Atuação</h4>
+          <ul>
+            <li>Direito Médico e Planos de Saúde</li>
+            <li>Responsabilidade médica e hospitalar</li>
+            <li>Direito do Consumidor</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>
+              <a class="js-wa" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.7-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+                Atendimento pelo WhatsApp
+              </a>
+            </li>
+            <li>
+              <a class="js-ig" href="#" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"/></svg>
+                <span class="js-ig-handle"></span>
+              </a>
+            </li>
+            <li>
+              <a class="js-email" href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <span class="js-email-text"></span>
+              </a>
+            </li>
+            <li id="atendimento-footer"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Este site tem caráter informativo e não constitui promessa de resultado. O conteúdo observa o Código de Ética e Disciplina da OAB e o Provimento 205/2021.</p>
+        <span class="copy">© <span id="ano"></span> <span id="nome-copy"></span> Advocacia</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante -->
+  <a class="wa-float js-wa" href="#" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+    <span class="tip">Falar no WhatsApp</span>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.7-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  </a>
+
+  <script>
+    /* =========================================================
+       CONFIGURAÇÃO DO ESCRITÓRIO
+       Edite apenas este bloco. Todos os botões e textos
+       dependentes são atualizados automaticamente.
+       ========================================================= */
+    const CONFIG = {
+      // Nome do advogado, como deve aparecer no rodapé
+      nome: 'Vitor Barbosa Nunes',
+      // Inscrição na OAB. Ex.: 'OAB/SP 000.000'. Deixe vazio para ocultar.
+      oab: 'OAB/SP 498.936',
+      // Número no formato internacional, somente dígitos: DDI + DDD + número
+      whatsapp: '5511976020878',
+      // Mensagem inicial que o visitante envia ao abrir a conversa
+      mensagem: 'Olá! Vim pelo site e gostaria de falar sobre um problema com plano de saúde, hospital ou serviço de consumo.',
+      // Usuário do Instagram, sem @
+      instagram: 'adv_vitorbarbosa',
+      // E-mail de contato. Deixe vazio para ocultar.
+      email: 'vbn.advogado@gmail.com',
+      // Forma de atendimento ou cidade. Deixe vazio para ocultar.
+      atendimento: 'Atendimento online'
+    };
+
+    (function () {
+      // WhatsApp
+      const wa = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(CONFIG.mensagem);
+      document.querySelectorAll('.js-wa').forEach(a => { a.href = wa; });
+
+      // Instagram
+      const ig = 'https://www.instagram.com/' + CONFIG.instagram + '/';
+      document.querySelectorAll('.js-ig').forEach(a => { a.href = ig; });
+      document.querySelectorAll('.js-ig-handle').forEach(s => { s.textContent = '@' + CONFIG.instagram; });
+
+      // Nome, OAB, e-mail e forma de atendimento
+      document.getElementById('nome-footer').textContent = CONFIG.nome;
+      document.getElementById('nome-copy').textContent = CONFIG.nome;
+      if (CONFIG.oab) {
+        document.getElementById('oab').textContent = CONFIG.oab;
+        document.getElementById('oab-footer').textContent = '· ' + CONFIG.oab;
+      }
+      if (CONFIG.email) {
+        document.querySelectorAll('.js-email').forEach(a => { a.href = 'mailto:' + CONFIG.email; });
+        document.querySelectorAll('.js-email-text').forEach(s => { s.textContent = CONFIG.email; });
+      } else {
+        document.querySelectorAll('.js-email').forEach(a => { a.closest('li').remove(); });
+      }
+      if (CONFIG.atendimento) {
+        document.getElementById('atendimento').textContent = CONFIG.atendimento;
+        document.getElementById('atendimento-footer').textContent = CONFIG.atendimento;
+      }
+
+      // Ano no rodapé
+      document.getElementById('ano').textContent = new Date().getFullYear();
+
+      // Header ao rolar
+      const header = document.getElementById('header');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Reveal ao entrar no viewport
+      const items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        items.forEach(el => io.observe(el));
+      } else {
+        items.forEach(el => el.classList.add('in'));
+      }
+
+      // FAQ: mantém apenas uma pergunta aberta por vez
+      const faqs = document.querySelectorAll('.faq-list details');
+      faqs.forEach(d => d.addEventListener('toggle', () => {
+        if (d.open) faqs.forEach(o => { if (o !== d) o.open = false; });
+      }));
+    })();
+  </script>
+</body>
+</html>
