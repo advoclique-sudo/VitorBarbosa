@@ -726,6 +726,19 @@
       const wa = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(CONFIG.mensagem);
       document.querySelectorAll('.js-wa').forEach(a => { a.href = wa; });
 
+      // Google Ads - conversao Contato no clique do WhatsApp (AW-302852281)
+      document.addEventListener('click', function (e) {
+        const link = e.target.closest('a[href*="wa.me"]');
+        if (link && typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-302852281/tRxCCNm12oMdELnRtJAB',
+            'value': 1.0,
+            'currency': 'BRL',
+            'transport_type': 'beacon'
+          });
+        }
+      });
+
       // Instagram
       const ig = 'https://www.instagram.com/' + CONFIG.instagram + '/';
       document.querySelectorAll('.js-ig').forEach(a => { a.href = ig; });
